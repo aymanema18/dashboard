@@ -13,8 +13,9 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    padding: 0 25px;
+    padding: 0 60px;
     box-shadow: 0px 2px 6px rgb(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .header-up {
@@ -182,4 +183,66 @@ a {
 .logo {
     font-size: 26px;
     font-weight: bold;
+}
+
+.main {
+    background-color: #e2e8f0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50px 1fr;
+    padding: 15px;
+}
+
+.main > p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cards-div {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    grid-auto-rows: 180px;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0px 2px 6px rgb(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 6px 1fr;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    align-self: end;
+}
+
+.title + p {
+    margin: 0;
+    padding-top: 5px;
+    align-self: top;
+    color: #6b6b6b;
+}
+
+.card-content-div {
+    padding: 0 20px;
+    display: grid;
+    grid-template-rows: 50px 1fr 40px;
+}
+
+.bar {
+    background-color: #f0b429;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    justify-content: end;
+    column-gap: 15px;
 }
